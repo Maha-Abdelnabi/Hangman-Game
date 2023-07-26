@@ -40,4 +40,18 @@ const words = {
 //get random property
 let allKeys = Object.keys(words)
 console.log(allKeys)
+//choose random index of the keys
+let randomPropNumber = Math.floor(Math.random()* allKeys.length);
+console.log(randomPropNumber)
+//get the name of the key index
+let randomPropName = allKeys[randomPropNumber]
+console.log(randomPropName)
+//get random value
+let randomPropValue = words[randomPropName]
+console.log(randomPropValue)
+//choose a word randomly in that category and get its position number (index) within this list using
+let randomValueNumber = Math.floor(Math.random()* randomPropValue.length)
+console.log(randomValueNumber)
 
+let randomValueValue = randomPropValue[randomValueNumber];
+console.log(randomValueValue)
