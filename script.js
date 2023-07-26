@@ -26,5 +26,18 @@ lettersArray.forEach(letter =>{
     //append span to the letters container
     lettersContainer.appendChild(span);
 
+});
 
-})
+//object of words + categories
+const words = {
+    animal: ["cat", "dog","lion", "horse", "duck", "kangroo"],
+    fruit :["apple", "banana" ,"orange", "cherry", "watermelon", "peach"],
+    vegetable: ['carrot', 'broccoli','spinach', 'onion', 'potato', 'tomato'],
+    place:['paris',"newyork",'tokyo', 'jerusalem', 'rome', 'egypt'],
+    color:['red' ,'blue','green', 'pink', 'purple'],
+}
+
+//get random property
+let allKeys = Object.keys(words)
+console.log(allKeys)
+
