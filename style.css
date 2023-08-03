@@ -168,6 +168,11 @@ hr{
     cursor: pointer;
     margin-bottom: 10px;
 }
+.letters .letter-box.clicked{
+    background-color: #222;
+    opacity: .2;
+    pointer-events: none;
+}
 /* letter guess */
 .letters-guess{
     margin: 10px auto;

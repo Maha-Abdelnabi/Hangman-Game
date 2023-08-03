@@ -78,3 +78,11 @@ lettersAndSpace.forEach(letter =>{
     //append span to letters guess container
     lettersGuessContainer.appendChild(emptySpan);
 })
+
+//handle clicking on letters
+document.addEventListener("click", (e) =>{
+    if(e.target.className ==='letter-box'){
+        e.target.classList.add('clicked');
+
+    }
+})
