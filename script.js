@@ -3,7 +3,6 @@ const letters = "abcdefghijklmnopqrstuvwxyz";
 
 //get array from letters
 let lettersArray= Array.from(letters);
-console.log(lettersArray);
 
 //select letters container
 let lettersContainer = document.querySelector(".letters");
@@ -40,18 +39,30 @@ const words = {
 //get random property
 let allKeys = Object.keys(words)
 console.log(allKeys)
-//choose random index of the keys
+//choose random index depends on keys length
 let randomPropNumber = Math.floor(Math.random()* allKeys.length);
 console.log(randomPropNumber)
-//get the name of the key index
+//get the name of the key index --category
 let randomPropName = allKeys[randomPropNumber]
 console.log(randomPropName)
-//get random value
+//get random value --category words
 let randomPropValue = words[randomPropName]
 console.log(randomPropValue)
 //choose a word randomly in that category and get its position number (index) within this list using
 let randomValueNumber = Math.floor(Math.random()* randomPropValue.length)
 console.log(randomValueNumber)
-
+//the chosen word
 let randomValueValue = randomPropValue[randomValueNumber];
-console.log(randomValueValue)
+console.log(randomValueValue);
+
+//set category info
+document.querySelector(".game-info .category span").innerHTML = randomPropName;
+
+
+//generate guess elements
+//select letters guess element
+let lettersGuessContainer = document.querySelector(".letters-guess");
+
+//convert chosen word to array
+let lettersAndSpace = Array.from(randomValueValue);
+console.log(lettersAndSpace)
