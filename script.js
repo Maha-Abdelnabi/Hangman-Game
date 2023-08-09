@@ -82,6 +82,8 @@ lettersAndSpace.forEach(letter =>{
 //select guess spans
 let guessSpan = document.querySelectorAll(".letters-guess span");
 
+//set the chosen the if true or not
+let theStatus = false;
 
 //handle clicking on letters
 document.addEventListener("click", (e) =>{
@@ -97,6 +99,9 @@ document.addEventListener("click", (e) =>{
     theChosenWord.forEach((wordLetter, wordIndex) =>{
        //if the clicked letter = to one of the chosen word letter
        if(wordLetter ==  theClickedLetter ){
+        //set status to true
+        theStatus=true;
+
         //loop on all guess spans
          guessSpan.forEach((span, spanIndex)=>{
             if(wordIndex === spanIndex){
@@ -105,6 +110,7 @@ document.addEventListener("click", (e) =>{
          })
        }
     })
-
+//outside the loop to prevent repeating the loop
+console.log(theStatus)
     }
 })
