@@ -178,7 +178,9 @@ hr{
     padding: 15px;
     text-align: center;
 }
-
+.letters.finished{
+    pointer-events: none;
+}
 .letters .letter-box{
     width :55px;
     height: 55px;
@@ -259,4 +261,16 @@ hr{
 }
 .hangman-draw.wrong-8 .leg{
     display: block;
+}
+.popup{
+ position: fixed;
+ background-color: #6c6768;
+ padding: 80px 20px;
+ width: 65%;
+ top: 20%;
+ left: 20%;
+ text-align: center;
+ font-size: 40px;
+ border: 1px solid #ccc;
+ color: #fff;   
 }
