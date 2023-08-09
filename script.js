@@ -83,6 +83,18 @@ lettersAndSpace.forEach(letter =>{
 document.addEventListener("click", (e) =>{
     if(e.target.className ==='letter-box'){
         e.target.classList.add('clicked');
+    //get the clicked letter
+    let theClickedLetter = e.target.innerHTML.toLowerCase();
 
+    //the chosen word
+    let theChosenWord = Array.from(randomValueValue.toLowerCase());
+    
+    //match the clicked letter to the letters in the chosen word
+    theChosenWord.forEach((wordLetter, index) =>{
+       //if the clicked letter = to one of the chosen word letter
+       if(wordLetter ==  theClickedLetter ){
+        console.log(`The ${theClickedLetter} was found at index: ${index}`);
+       }
+    })
     }
 })
