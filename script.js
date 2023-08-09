@@ -82,35 +82,47 @@ lettersAndSpace.forEach(letter =>{
 //select guess spans
 let guessSpan = document.querySelectorAll(".letters-guess span");
 
-//set the chosen the if true or not
-let theStatus = false;
+//set wrong attempts
+let wrongAttempts = 0;
+
+//select the draw element
+let theDraw = document.querySelector(".hangman-draw")
 
 //handle clicking on letters
 document.addEventListener("click", (e) =>{
-    if(e.target.className ==='letter-box'){
-        e.target.classList.add('clicked');
+  //set the chosen the if true or not
+  let theStatus = false;
+  if (e.target.className === "letter-box") {
+    e.target.classList.add("clicked");
     //get the clicked letter
     let theClickedLetter = e.target.innerHTML.toLowerCase();
 
     //the chosen word
     let theChosenWord = Array.from(randomValueValue.toLowerCase());
-    
+
     //match the clicked letter to the letters in the chosen word
-    theChosenWord.forEach((wordLetter, wordIndex) =>{
-       //if the clicked letter = to one of the chosen word letter
-       if(wordLetter ==  theClickedLetter ){
+    theChosenWord.forEach((wordLetter, wordIndex) => {
+      //if the clicked letter = to one of the chosen word letter
+      if (wordLetter == theClickedLetter) {
         //set status to true
-        theStatus=true;
+        theStatus = true;
 
         //loop on all guess spans
-         guessSpan.forEach((span, spanIndex)=>{
-            if(wordIndex === spanIndex){
-                span.innerHTML = theClickedLetter;
-            }
-         })
-       }
-    })
-//outside the loop to prevent repeating the loop
-console.log(theStatus)
-    }
+        guessSpan.forEach((span, spanIndex) => {
+          if (wordIndex === spanIndex) {
+            span.innerHTML = theClickedLetter;
+          }
+        });
+      }
+    });
+   //if letter is wrong
+   if(theStatus !== true){
+    //increase the wrong attempts
+    wrongAttempts++;
+
+    //add wrong class to draw element
+    theDraw.classList.add("wrong-" + wrongAttempts);
+
+   }
+  }
 })
