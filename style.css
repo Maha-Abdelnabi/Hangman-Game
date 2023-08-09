@@ -236,3 +236,27 @@ hr{
     top: 50%;
     transform: translate(-50%, -50%);
 }
+.hangman-draw.wrong-1 .the-draw{
+    display: block;
+}
+.hangman-draw.wrong-2 .the-stand{
+    display: block;
+}
+.hangman-draw.wrong-3 .the-hang{
+    display: block;
+}
+.hangman-draw.wrong-4 .the-rope{
+    display: block;
+}
+.hangman-draw.wrong-5 .head{
+    display: block;
+}
+.hangman-draw.wrong-6 .body{
+    display: block;
+}
+.hangman-draw.wrong-7 .hands{
+    display: block;
+}
+.hangman-draw.wrong-8 .leg{
+    display: block;
+}
