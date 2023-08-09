@@ -79,6 +79,10 @@ lettersAndSpace.forEach(letter =>{
     lettersGuessContainer.appendChild(emptySpan);
 })
 
+//select guess spans
+let guessSpan = document.querySelectorAll(".letters-guess span");
+
+
 //handle clicking on letters
 document.addEventListener("click", (e) =>{
     if(e.target.className ==='letter-box'){
@@ -90,11 +94,17 @@ document.addEventListener("click", (e) =>{
     let theChosenWord = Array.from(randomValueValue.toLowerCase());
     
     //match the clicked letter to the letters in the chosen word
-    theChosenWord.forEach((wordLetter, index) =>{
+    theChosenWord.forEach((wordLetter, wordIndex) =>{
        //if the clicked letter = to one of the chosen word letter
        if(wordLetter ==  theClickedLetter ){
-        console.log(`The ${theClickedLetter} was found at index: ${index}`);
+        //loop on all guess spans
+         guessSpan.forEach((span, spanIndex)=>{
+            if(wordIndex === spanIndex){
+                span.innerHTML = theClickedLetter;
+            }
+         })
        }
     })
+
     }
 })
