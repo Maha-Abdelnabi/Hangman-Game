@@ -185,7 +185,7 @@ hr{
     width :55px;
     height: 55px;
     display: inline-block;
-    background-color: #009688;
+    background-color: #23669d;
     color: #fff;
     font-size: 24px;
     margin-right: 10px;
@@ -262,9 +262,9 @@ hr{
 .hangman-draw.wrong-8 .leg{
     display: block;
 }
-.popup{
+.popup-lose{
  position: fixed;
- background-color: #6c6768;
+ background-color: #918588;
  padding: 80px 20px;
  width: 65%;
  top: 20%;
@@ -273,4 +273,16 @@ hr{
  font-size: 40px;
  border: 1px solid #ccc;
  color: #fff;   
+}
+.popup-win{
+position: fixed;
+ background-color: #6c6768;
+ padding: 80px 20px;
+ width: 65%;
+ top: 20%;
+ left: 20%;
+ text-align: center;
+ font-size: 40px;
+ border: 1px solid #ccc;
+ color: #fff;
 }
